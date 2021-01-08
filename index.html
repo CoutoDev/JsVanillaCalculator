@@ -1,124 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Super Calculadora</title>
+		<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="./css/reset.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Calculadora</title>
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="./css/calculadora.css">
-</head>
+	<body>
+		<div class="container">
+			<div class="center">
+				<h4 class="header">Super Calculadora</h4>
+			</div>
 
-<body>
-    <div class="container">
+			<section id="input-numbers" class="row">
+				<form class="col s12">
+					<div class="row">
+						<div class="input-field col s6">
+							<input type="number" name="numberA" id="numberA" />
+							<label for="numberA">Primeiro Numero (A)</label>
+						</div>
+						<div class="input-field col s6">
+							<input type="number" name="numberB" id="numberB" />
+							<label for="numberA">Segundo Numero (B)</label>
+						</div>
+					</div>
+				</form>
+			</section>
 
-        <div class="center">
-            <h4 class="header">Super Calculadora</h4>
-        </div>
+			<section id="calculations" class="row">
+				<div class="col s4">
+					<div class="row">
+						<div class="input-field col s12">
+							<input
+								type="text"
+								name="soma"
+								id="soma"
+								readonly
+								aria-readonly="true"
+							/>
+							<label for="soma">Soma (A + B):</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input
+								type="text"
+								name="multiplicacao"
+								id="multiplicacao"
+								readonly
+								aria-readonly="true"
+							/>
+							<label for="multiplicacao">Multiplicação (A x B):</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input
+								type="text"
+								name="quadradoA"
+								id="quadradoA"
+								readonly
+								aria-readonly="true"
+							/>
+							<label for="quadradoA">Quadrado de A (A²):</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input
+								type="text"
+								name="divisoresIntB"
+								id="divisoresIntB"
+								readonly
+								aria-readonly="true"
+							/>
+							<label for="divisoresIntB">Divisores Inteiros de B:</label>
+						</div>
+					</div>
+				</div>
+				<div class="col s4">
+					<div class="row">
+						<div class="input-field col s12">
+							<input
+								type="text"
+								name="subtracao"
+								id="subtracao"
+								readonly
+								aria-readonly="true"
+							/>
+							<label for="subtracao">Subtracao (A - B):</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input
+								type="text"
+								name="divisao"
+								id="divisao"
+								readonly
+								aria-readonly="true"
+							/>
+							<label for="divisao">Divisão (A / B):</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input
+								type="text"
+								name="quadradoB"
+								id="quadradoB"
+								readonly
+								aria-readonly="true"
+							/>
+							<label for="quadradoB">Quadrado de B (B²):</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input
+								type="text"
+								name="fatorialA"
+								id="fatorialA"
+								readonly
+								aria-readonly="true"
+							/>
+							<label for="fatorialA">Fatorial de A (A!):</label>
+						</div>
+					</div>
+				</div>
+				<div class="col s4">
+					<div class="row">
+						<div class="input-field col s12">
+							<input
+								type="text"
+								name="subtracao2"
+								id="subtracao2"
+								readonly
+								aria-readonly="true"
+							/>
+							<label for="subtracao2">Subtração 2 (B - A):</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input
+								type="text"
+								name="divisao2"
+								id="divisao2"
+								readonly
+								aria-readonly="true"
+							/>
+							<label for="divisao2">Divisão 2 (B / A):</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input
+								type="text"
+								name="divisoresIntA"
+								id="divisoresIntA"
+								readonly
+								aria-readonly="true"
+							/>
+							<label for="divisoresIntA">Divisores Inteiros de A:</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input
+								type="text"
+								name="fatorialB"
+								id="fatorialB"
+								readonly
+								aria-readonly="true"
+							/>
+							<label for="fatorialB">Fatorial de B (B!):</label>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
 
-        <section id="input-numbers" class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input type="number" name="numberA" id="numberA">
-                        <label for="numberA">Primeiro Numero (A)</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input type="number" name="numberB" id="numberB">
-                        <label for="numberA">Segundo Numero (B)</label>
-                    </div>
-                </div>
-            </form>
-        </section>
-
-        <section id="calculations" class="row">
-            <div class="col s4">
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input type="text" name="soma" id="soma" readonly aria-readonly="true">
-                        <label for="soma">Soma (A + B):</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input type="text" name="multiplicacao" id="multiplicacao" readonly aria-readonly="true">
-                        <label for="multiplicacao">Multiplicação (A x B):</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input type="text" name="quadradoA" id="quadradoA" readonly aria-readonly="true">
-                        <label for="quadradoA">Quadrado de A (A²):</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input type="text" name="divisoresIntB" id="divisoresIntB" readonly aria-readonly="true">
-                        <label for="divisoresIntB">Divisores Inteiros de B:</label>
-                    </div>
-                </div>
-            </div>
-            <div class="col s4">
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input type="text" name="subtracao" id="subtracao" readonly aria-readonly="true">
-                        <label for="subtracao">Subtracao (A - B):</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input type="text" name="divisao" id="divisao" readonly aria-readonly="true">
-                        <label for="divisao">Multiplicação (A / B):</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input type="text" name="quadradoB" id="quadradoB" readonly aria-readonly="true">
-                        <label for="quadradoB">Quadrado de B (B²):</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input type="text" name="fatorialA" id="fatorialA" readonly aria-readonly="true">
-                        <label for="fatorialA">Fatorial de A (A!):</label>
-                    </div>
-                </div>
-            </div>
-            <div class="col s4">
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input type="text" name="subtracao2" id="subtracao2" readonly aria-readonly="true">
-                        <label for="subtracao2">Subtração 2 (B - A):</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input type="text" name="divisao2" id="divisao2" readonly aria-readonly="true">
-                        <label for="divisao2">Divisão 2 (B / A):</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input type="text" name="divisoresIntA" id="divisoresIntA" readonly aria-readonly="true">
-                        <label for="divisoresIntA">Quadrado de A (A²):</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input type="text" name="fatorialB" id="fatorialB" readonly aria-readonly="true">
-                        <label for="fatorialB">Fatorial de B (B!):</label>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </div>
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="./js/calculadora.js"></script>
-</body>
-
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script src="./js/calculadora.js"></script>
+	</body>
 </html>
